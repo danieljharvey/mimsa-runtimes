@@ -1,0 +1,15 @@
+let initialState =
+  "";
+
+let reducer =
+  \state ->
+    \input ->
+      let message =
+        "The last item was " <> state;
+
+      (input, message);
+
+{ init: initialState,
+  intro: "Hello, welcome to Mimsa!",
+  next: reducer,
+  prompt: ":> " }
